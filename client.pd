@@ -1,16 +1,48 @@
-#N canvas 0 410 604 364 10;
-#X obj 97 190 netsend;
-#X floatatom 97 225 5 0 0 0 - - -;
-#X msg 267 154 send var1 \$1;
-#X msg 97 82 connect 192.168.0.255 13000;
-#X msg 397 155 send var2 \$1;
-#X obj 300 -8 vsl 15 128 0 100 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 12700 1;
-#X obj 397 -8 vsl 15 128 0 100 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 12700 1;
+#N canvas 338 445 557 402 10;
+#X obj 97 272 netsend;
+#X floatatom 97 300 5 0 0 0 - - -;
+#X msg 369 182 send var1 \$1;
+#X msg 212 181 send var2 \$1;
+#X msg 31 121 connect localhost 13000;
+#X obj 372 156 hsl 128 15 0 100 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 215 156 hsl 128 15 0 100 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 351 -41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 369 28 float;
+#X floatatom 369 111 5 0 0 0 - - -;
+#X obj 436 28 + 1;
+#X obj 351 -13 metro 100;
+#X obj 369 56 mod 100;
+#X floatatom 308 74 5 0 0 0 - - -;
+#X floatatom 211 122 5 0 0 0 - - -;
+#X floatatom 305 28 5 0 0 0 - - -;
+#X text 331 47 comment;
+#X obj 259 90 -;
+#X text 231 -42 Click here to start;
+#X text 418 -14 comment;
+#X obj 285 -13 float 100;
+#X text 28 83 Change localhost to server IP;
+#X text 22 100 Click to init communication;
 #X connect 0 0 1 0;
 #X connect 2 0 0 0;
 #X connect 3 0 0 0;
 #X connect 4 0 0 0;
 #X connect 5 0 2 0;
-#X connect 6 0 4 0;
+#X connect 6 0 3 0;
+#X connect 7 0 11 0;
+#X connect 7 0 20 0;
+#X connect 8 0 10 0;
+#X connect 8 0 12 0;
+#X connect 9 0 5 0;
+#X connect 10 0 8 1;
+#X connect 11 0 8 0;
+#X connect 11 0 15 0;
+#X connect 12 0 9 0;
+#X connect 12 0 13 0;
+#X connect 13 0 17 1;
+#X connect 14 0 6 0;
+#X connect 15 0 17 0;
+#X connect 17 0 14 0;
+#X connect 20 0 15 0;

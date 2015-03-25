@@ -1,12 +1,22 @@
-#N canvas 193 199 598 364 10;
-#X obj 166 103 netreceive 13000;
-#X obj 164 152 print TCP;
-#X floatatom 255 152 5 0 0 0 - - -;
-#X obj 387 209 comport 2;
-#X msg 749 198 devices;
-#X obj 385 267 print;
+#N canvas 683 83 598 364 10;
+#X obj 116 31 netreceive 13000;
+#X obj 49 94 print TCP;
+#X floatatom 209 69 5 0 0 0 - - -;
+#X obj 147 94 route var1 var2;
+#X floatatom 147 141 5 0 0 0 - - -;
+#X floatatom 190 141 5 0 0 0 - - -;
+#X obj 150 196 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 3500 1;
+#X obj 193 171 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 6500 1;
+#X text 246 70 Network status;
+#X text 27 117 Print to console;
+#X text 120 195 var1;
+#X text 160 170 var2;
 #X connect 0 0 1 0;
+#X connect 0 0 3 0;
 #X connect 0 1 2 0;
-#X connect 3 0 5 0;
+#X connect 3 0 4 0;
 #X connect 3 1 5 0;
-#X connect 4 0 3 0;
+#X connect 4 0 6 0;
+#X connect 5 0 7 0;
