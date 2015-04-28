@@ -7,7 +7,7 @@
 #X floatatom 195 50 5 0 0 0 - - -;
 #X obj 40 135 readsf~;
 #X obj 40 171 dac~;
-#X obj 25 15 inlet;
+#X obj 24 31 inlet;
 #X obj 96 16 inlet;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array current_loop 249035 float 2;
@@ -29,7 +29,7 @@
 #X obj 663 282 float;
 #X floatatom 657 373 5 0 0 0 - - -;
 #X obj 720 163 hsl 128 15 400 900 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 7400 1;
+-262144 -1 -1 0 1;
 #X obj 656 408 * 4134.38;
 #X msg 81 259 stop;
 #X obj 768 392 /;
