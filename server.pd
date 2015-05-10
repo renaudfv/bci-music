@@ -1,4 +1,4 @@
-#N canvas 485 23 361 444 10;
+#N canvas 732 23 537 461 10;
 #X obj 48 87 print TCP;
 #X floatatom 208 62 5 0 0 0 - - -;
 #X obj 146 87 route var1 var2;
@@ -17,7 +17,7 @@
 #X obj 88 367 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 103 257 hsl 128 15 60 130 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 10400 1;
 #X floatatom 100 288 5 0 0 0 - - -;
 #X obj 22 290 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -32,6 +32,8 @@
 #X obj 40 184 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 212 372 drum_sequencer;
+#X obj 347 295 hsl 128 15 0 100 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
 #X connect 2 0 3 0;
 #X connect 2 1 4 0;
 #X connect 3 0 5 0;
@@ -48,3 +50,4 @@
 #X connect 17 0 12 1;
 #X connect 21 0 24 1;
 #X connect 23 0 16 0;
+#X connect 25 0 24 2;
