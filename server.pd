@@ -1,4 +1,4 @@
-#N canvas 10 102 487 423 10;
+#N canvas 18 369 487 423 10;
 #X obj 48 87 print TCP;
 #X floatatom 208 62 5 0 0 0 - - -;
 #X obj 146 87 route var1 var2;
@@ -13,11 +13,10 @@
 #X text 119 188 var1;
 #X text 159 163 var2;
 #X obj 115 24 netreceive 13000 1;
-#X obj 88 340 bpm;
-#X obj 88 367 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 75 378 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 103 257 hsl 128 15 60 130 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 12700 1;
+-1 -1 6100 1;
 #X floatatom 100 288 5 0 0 0 - - -;
 #X obj 22 290 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -26,14 +25,18 @@
 #X text 10 272 start;
 #X text 46 271 stop;
 #X text 100 237 ECG [60 \, 130];
-#X obj 293 269 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X text 268 247 start;
-#X obj 40 184 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 40 184 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 212 372 drum_sequencer;
 #X obj 336 297 hsl 128 15 0 100 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4900 1;
+-1 -1 12700 1;
+#X text 333 277 EEG [0 \, 100];
+#X text 240 236;
+#X obj 31 375 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 75 343 bpm;
+#X obj 30 341 bpm;
+#X obj 110 317 * 4;
 #X connect 2 0 3 0;
 #X connect 2 1 4 0;
 #X connect 3 0 5 0;
@@ -41,13 +44,18 @@
 #X connect 11 0 0 0;
 #X connect 11 0 2 0;
 #X connect 11 0 1 0;
-#X connect 12 0 13 0;
-#X connect 13 0 21 0;
-#X connect 14 0 15 0;
-#X connect 15 0 12 2;
-#X connect 16 0 12 0;
-#X connect 16 0 24 0;
-#X connect 17 0 12 1;
-#X connect 21 0 24 1;
-#X connect 23 0 16 0;
-#X connect 25 0 24 2;
+#X connect 12 0 21 1;
+#X connect 13 0 14 0;
+#X connect 14 0 27 2;
+#X connect 14 0 28 0;
+#X connect 15 0 27 0;
+#X connect 15 0 26 0;
+#X connect 15 0 14 0;
+#X connect 15 0 21 0;
+#X connect 16 0 27 1;
+#X connect 16 0 26 1;
+#X connect 20 0 15 0;
+#X connect 22 0 21 2;
+#X connect 26 0 12 0;
+#X connect 27 0 25 0;
+#X connect 28 0 26 2;
